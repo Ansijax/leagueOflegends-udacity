@@ -1,0 +1,6 @@
+Problem Description
+
+League of legends is the most played game nowadays. Players are usually very addicted
+and they want monitoring friend’s score or they want look for last game stats of super star player. Other time, they simple want to search the most recent result  of their teammate while playing or show to their friend a personal score.
+
+With UdacityLol League of Legends players can do all this via mobile and save the match result on their phone.

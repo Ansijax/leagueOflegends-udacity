@@ -51,6 +51,14 @@ public class GamesAdapter extends ArrayAdapter<Game> {
         holder.championIcon.setImageBitmap(match.getChampion());
         holder.gameMode.setText(match.getGameModeSub());
         holder.kda.setText("K/D/A:"+match.getKill()+"/"+match.getDeath()+"/"+match.getAssists());
+
+       if(match.getWin()){
+            holder.result.setText("Victory");
+
+        }else {
+            holder.result.setText("Defeat");
+
+        }
         return convertView;
     }
 }

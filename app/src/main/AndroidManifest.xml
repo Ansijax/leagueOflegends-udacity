@@ -52,6 +52,8 @@
         <activity
             android:name=".FavoriteDetail"
             android:label="@string/title_activity_favorite_detail"
+            android:configChanges="orientation|screenSize"
+
             android:parentActivityName=".FavoriteActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

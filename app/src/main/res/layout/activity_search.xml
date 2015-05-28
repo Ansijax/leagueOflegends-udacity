@@ -11,11 +11,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/inputSummoneName_Text"
         android:hint="Summoner name"
-        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:layout_above="@+id/go_favorite"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:singleLine="true"
-        android:layout_marginTop="77dp" />
+        android:layout_toLeftOf="@+id/search_button"
+        android:layout_toStartOf="@+id/search_button" />
 
     <Button
         android:layout_width="wrap_content"
@@ -23,17 +24,18 @@
         android:text="Search"
         android:id="@+id/search_button"
         android:onClick="startSearch"
-        android:layout_alignTop="@+id/inputSummoneName_Text"
-        android:layout_toRightOf="@+id/inputSummoneName_Text"
-        android:layout_toEndOf="@+id/inputSummoneName_Text" />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/go_favorite"
+        android:layout_toEndOf="@+id/go_favorite" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go to favorite"
         android:id="@+id/go_favorite"
-        android:layout_below="@+id/search_button"
         android:onClick="goToFavorite"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/search_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" />
 
 </RelativeLayout>

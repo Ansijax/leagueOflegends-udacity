@@ -28,20 +28,16 @@ public class FavoriteActivity extends ActionBarActivity implements FavoriteListF
         }else
         mTwoPane=false;
         FavoriteListFragment fragment = new FavoriteListFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.frame_favorite,fragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.frame_favorite, fragment).commit();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_favorite, menu);
-        return true;
-    }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-       // (FavoriteDetailFragment)getSupportFragmentManager().findFragmentByTag(DETAILFRAGMENT_TAG);
+        return true;
     }
 
     @Override
@@ -52,12 +48,22 @@ public class FavoriteActivity extends ActionBarActivity implements FavoriteListF
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if(id==android.R.id.home){
+            super.onBackPressed();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+       // (FavoriteDetailFragment)getSupportFragmentManager().findFragmentByTag(DETAILFRAGMENT_TAG);
+    }
+
+
 
     @Override
     public void onItemSelected(Long gameID) {

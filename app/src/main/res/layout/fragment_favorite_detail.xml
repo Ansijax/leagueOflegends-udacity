@@ -14,7 +14,6 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center"
-            android:text="SummoneName"
             android:id="@+id/summoner_name_text"
             android:textStyle="bold|italic" />
     </FrameLayout>
@@ -48,7 +47,6 @@
                 android:layout_gravity="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textAlignment="center"
-                android:text="champion_text"
                 android:id="@+id/championName"
                 />
 
@@ -76,7 +74,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="result"
+
         android:id="@+id/game_result_text"
         />
     <TextView
@@ -84,7 +82,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="lvl"
+
         android:id="@+id/lvl"
         />
     <TextView
@@ -92,7 +90,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="kda"
+
         android:id="@+id/kda"
         />
     <TextView
@@ -100,7 +98,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="gold"
+
         android:id="@+id/gold"
         />
     <TextView
@@ -108,7 +106,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="cs"
+
         android:id="@+id/cs"
         />
 
@@ -117,7 +115,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Damage"
+
         android:id="@+id/damage"
         />
 

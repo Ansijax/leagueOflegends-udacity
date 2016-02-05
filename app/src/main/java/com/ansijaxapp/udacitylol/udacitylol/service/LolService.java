@@ -8,6 +8,7 @@ import android.os.ResultReceiver;
 import android.util.Log;
 
 import com.ansijaxapp.udacitylol.udacitylol.data.Game;
+import com.ansijaxapp.udacitylol.udacitylol.utils.Config;
 import com.ansijaxapp.udacitylol.udacitylol.utils.JsonParser;
 
 import org.json.JSONException;
@@ -29,7 +30,7 @@ import java.util.ArrayList;
 public class LolService extends IntentService {
 
     private final String BASE_URL = "https://euw.api.pvp.net/api/lol/euw/";
-    final String API_KEY ="?api_key=a8a396dd-919b-45cf-a7a4-0ccfec4c8a2a";
+    final String API_KEY = "?"+Config.TOKEN;
     private final String LOG_TAG = LolService.class.getSimpleName();
     private String mSummonerName=null;
 
@@ -50,7 +51,7 @@ public class LolService extends IntentService {
         ResultReceiver rec = intent.getParcelableExtra("receiverTag");
 
         rec.send(LolServiceReceiver.START_SERVICE,null);
-                //new Uri("https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/ansijax?api_key=a8a396dd-919b-45cf-a7a4-0ccfec4c8a2a");
+
 
         try {
 

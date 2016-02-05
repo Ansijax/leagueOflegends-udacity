@@ -3,10 +3,12 @@ package com.ansijaxapp.udacitylol.udacitylol.data;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
+import com.ansijaxapp.udacitylol.udacitylol.utils.Config;
 import com.ansijaxapp.udacitylol.udacitylol.utils.JsonParser;
 import com.ansijaxapp.udacitylol.udacitylol.utils.Utils;
 
@@ -168,7 +170,8 @@ public class Game implements Parcelable{
 
     private String getBitmapName(Integer champid){
         final String BASE_URL= "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/";
-        final String URL_PARAM="?champData=image&api_key=a8a396dd-919b-45cf-a7a4-0ccfec4c8a2a";
+
+        final String URL_PARAM="?champData=image&"+ Config.TOKEN;
         String response;
         URL request = null;
         String imgName="Annie.png"; //default png
@@ -197,7 +200,9 @@ public class Game implements Parcelable{
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
+            Environment.getExternalStorageDirectory().getAbsolutePath();
             return imgName;
+
         }
 
     }
